@@ -1,7 +1,7 @@
 @import "../../styles/variables.css";
 
-.header {
+.portfolio {
     background: var(--white);
     width: 100%;
-    min-height: 400px;
+    min-height: 600px;
 }

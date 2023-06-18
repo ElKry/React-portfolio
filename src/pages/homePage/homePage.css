@@ -11,4 +11,7 @@
 .inner {
     width: 970px;
     padding: 0 30px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 70px;
 }
