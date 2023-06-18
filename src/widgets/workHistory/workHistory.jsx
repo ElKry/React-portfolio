@@ -1,7 +1,8 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 import "./workHistory.css";
 
-export const WorkHistory = () => {
-    return <div className="work">Work History</div>
+export const WorkHistory = ({name}) => {
+    return <Element name={name} className="work">Work History</Element>
 }

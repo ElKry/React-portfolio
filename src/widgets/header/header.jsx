@@ -1,7 +1,8 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 import "./header.css";
 
 export const Header = () => {
-    return <div className="header">Header</div>
+    return <Element name="home" className="header">Header</Element>
 }
