@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { isValidValue } from "../../shared/helpers/validator";
 import { Input } from "../../shared/input/input";
+import { sendForm } from "../../shared/helpers/sendForm";
 
 import "./form.css";
 
@@ -39,7 +40,9 @@ export const Form = () => {
 
     setFormErrorState(updatedFormErrorState);
 
+    const formData = new FormData(event.target);
     console.log(error > 0 ? "ERROR" : "SUCCESS");
+    sendForm(formData);
   };
 
   return (

@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { sendHookForm } from "../../shared/helpers/sendForm";
 
 export const HookForm = () => {
   const {
@@ -6,7 +7,10 @@ export const HookForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    sendHookForm(data);
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
