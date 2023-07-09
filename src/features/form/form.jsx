@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { isValidValue } from "../../shared/helpers/validator";
+import { isValidValue } from "../../process/helpers/validator";
 import { Input } from "../../shared/input/input";
-import { sendForm } from "../../shared/helpers/sendForm";
+import { sendForm } from "../../process/helpers/sendForm";
 
 import "./form.css";
 

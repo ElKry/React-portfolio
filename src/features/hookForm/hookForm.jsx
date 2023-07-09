@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { sendHookForm } from "../../shared/helpers/sendForm";
+import { sendHookForm } from "../../process/helpers/sendForm";
 
 export const HookForm = () => {
   const {
