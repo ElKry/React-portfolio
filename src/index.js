@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './styles/index.css';
-import { HomePage } from './pages/homePage/homePage';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Router } from "./router";
+import "./styles/index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <HomePage />
+    <Router />
   </React.StrictMode>
 );

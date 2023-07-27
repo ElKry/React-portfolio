@@ -13,12 +13,12 @@ export const CATEGORIES = ["All", "UI Design", "Brands", "Web Templates"];
 export const PORTOFOLIO_DATA = [
   {
     img: ImgOne,
-    link: "/",
+    link: "https://elkry.github.io/",
     category: CATEGORIES[1],
   },
   {
     img: ImageTwo,
-    link: "/",
+    link: "project-one",
     category: CATEGORIES[1],
   },
   {
