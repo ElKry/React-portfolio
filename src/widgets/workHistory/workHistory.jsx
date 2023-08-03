@@ -3,13 +3,23 @@ import { Element } from "react-scroll";
 import { Header } from "../../shared/header/header";
 import { Paragraph } from "../../shared/paragraph/paragraph";
 import { WorkCard } from "../../features/workCard/workCard";
+import { useLang } from "../../processes/contextLanguage";
 
 import "./workHistory.css";
 
 export const WorkHistory = ({ name, data }) => {
-  const mainInfo = data.history.map((work, index) => (
-    <WorkCard data={work} key={`work_${index}`} />
-  ));
+  const { lang } = useLang();
+
+  const mainInfo = data.history.map((work, index) => {
+    if (work.en && work.ru) {
+      if (lang === "ru")
+        return <WorkCard data={work.ru} key={`work_ru_${index}`} />;
+      if (lang === "en")
+        return <WorkCard data={work.en} key={`work_en_${index}`} />;
+    } else {
+      return <WorkCard data={work} key={`work_${index}`} />;
+    }
+  });
 
   return (
     <Element name={name} className="work">
